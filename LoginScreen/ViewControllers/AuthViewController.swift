@@ -59,8 +59,8 @@ private extension AuthViewController {
         addActions()
         
         setupLogo()
-        setupEmailStack()
-        setupLoginStack()
+        setupStack(emailStack, with: [emailLabel,emailButton], and: .vertical)
+        setupStack(loginStack, with: [loginLabel,loginButton], and: .vertical)
         
         setupLayout()
     }
@@ -83,25 +83,10 @@ private extension AuthViewController {
         logoImage.contentMode = .scaleAspectFit
     }
     
-    func setupEmailStack() {
-        emailStack.axis = .vertical
-        
-        [
-            emailLabel,
-            emailButton
-        ].forEach { subView in
-            emailStack.addArrangedSubview(subView)
-        }
-    }
-    
-    func setupLoginStack() {
-        loginStack.axis = .vertical
-        
-        [
-            loginLabel,
-            loginButton
-        ].forEach { subView in
-            loginStack.addArrangedSubview(subView)
+    func setupStack(_ stack: UIStackView, with subViews: [UIView], and axis: NSLayoutConstraint.Axis) {
+        stack.axis = axis
+        subViews.forEach { subView in
+            stack.addArrangedSubview(subView)
         }
     }
     
