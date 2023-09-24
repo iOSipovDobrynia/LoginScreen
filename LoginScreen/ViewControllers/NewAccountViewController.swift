@@ -15,13 +15,13 @@ final class NewAccountViewController: UIViewController {
     private let bgView = UIView()
     
     private let firstnameLabel = CustomLabel(title: "Firstname")
-    private let secondnameLabel = CustomLabel(title: "Secondname")
+    private let secondnameLabel = CustomLabel(title: "Surname")
     private let emailLabel = CustomLabel(title: "Email")
     private let passwordLabel = CustomLabel(title: "Password")
     private let questionLabel = CustomLabel(title: "Already have account?")
     
-    private let firstnameTF = CustomTextField(placeholder: "Enter your name")
-    private let secondnameTF = CustomTextField(placeholder: "Enter your surname")
+    private let firstnameTF = CustomTextField(placeholder: "Name")
+    private let secondnameTF = CustomTextField(placeholder: "Surname")
     private let emailTF = CustomTextField(placeholder: "Enter your email")
     private let passwordTF = CustomTextField(placeholder: "Enter your password", isSecure: true)
     
