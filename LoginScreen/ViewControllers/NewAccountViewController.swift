@@ -52,6 +52,7 @@ private extension NewAccountViewController {
         
         setupLogo()
         setupBGView()
+        setupLinkButton()
         setupStack(firstnameStack, with: [firstnameLabel, firstnameTF], and: .vertical)
         setupStack(secondnameStack, with: [secondnameLabel, secondnameTF], and: .vertical)
         setupStack(nameStack, with: [firstnameStack, secondnameStack], and: .horizontal)
@@ -74,7 +75,8 @@ private extension NewAccountViewController {
             nameStack,
             emailStack,
             passwordStack,
-            questionStack
+            questionStack,
+            signUpButton
         ].forEach { subView in
             view.addSubview(subView)
         }
@@ -87,6 +89,13 @@ private extension NewAccountViewController {
     func setupLogo() {
         logoImage.image = UIImage(named: "logo")
         logoImage.contentMode = .scaleAspectFit
+    }
+    
+    func setupLinkButton() {
+        linkButton.titleLabel?.font = .boldSystemFont(ofSize: 20)
+        linkButton.setTitle("Sing in", for: .normal)
+        linkButton.setTitleColor(.red, for: .normal)
+        linkButton.setTitleColor(.highlightedColor, for: .highlighted)
     }
     
     func setupStack(_ stack: UIStackView, with subViews: [UIView], and axis: NSLayoutConstraint.Axis) {
@@ -134,6 +143,26 @@ private extension NewAccountViewController {
             bgView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),
             bgView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),
             bgView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
+            
+            nameStack.topAnchor.constraint(equalTo: logoImage.bottomAnchor, constant: 30),
+            nameStack.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            nameStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            emailStack.topAnchor.constraint(equalTo: nameStack.bottomAnchor, constant: 30),
+            emailStack.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            emailStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            passwordStack.topAnchor.constraint(equalTo: emailStack.bottomAnchor, constant: 30),
+            passwordStack.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            passwordStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            
+            signUpButton.topAnchor.constraint(equalTo: passwordStack.bottomAnchor, constant: 30),
+            signUpButton.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+
+            questionStack.topAnchor.constraint(equalTo: signUpButton.bottomAnchor, constant: 30),
+            questionStack.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.8),
+            questionStack.centerXAnchor.constraint(equalTo: view.centerXAnchor),
         ])
     }
 }

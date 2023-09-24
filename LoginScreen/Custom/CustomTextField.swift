@@ -60,6 +60,6 @@ final class CustomTextField: UITextField {
             isSecureTextEntry = true
         }
         
-        heightAnchor.constraint(equalToConstant: 60).isActive = true
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
     }
 }
