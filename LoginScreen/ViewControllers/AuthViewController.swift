@@ -45,8 +45,10 @@ final class AuthViewController: UIViewController {
     }
     
     @objc
-    private func emailButtonPressed() {
+    private func showNewAccountViewController() {
+        let newAccVC = NewAccountViewController()
         
+        present(newAccVC, animated: true)
     }
 }
 
@@ -91,7 +93,7 @@ private extension AuthViewController {
     }
     
     func addActions() {
-        emailButton.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
+        emailButton.addTarget(self, action: #selector(showNewAccountViewController), for: .touchUpInside)
         loginButton.addTarget(self, action: #selector(showLoginViewController), for: .touchUpInside)
     }
 }
