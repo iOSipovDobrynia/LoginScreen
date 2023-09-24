@@ -22,9 +22,11 @@ final class AuthViewController: UIViewController {
 // MARK: - Setting View
 private extension AuthViewController {
     func setupView() {
-        view.backgroundColor = .brown
+        view.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
         
         addSubviews()
+        
+        setupLogo()
         
         setupLayout()
     }
@@ -39,6 +41,11 @@ private extension AuthViewController {
             view.addSubview(subView)
         }
     }
+    
+    func setupLogo() {
+        logoImage.image = UIImage(named: "logo")
+        logoImage.contentMode = .scaleAspectFit
+    }
 }
 
 // MARK: - Layout
@@ -51,7 +58,10 @@ private extension AuthViewController {
         }
         
         NSLayoutConstraint.activate([
-            
+            logoImage.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
+            logoImage.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            logoImage.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.7),
+            logoImage.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.25)
         ])
     }
 }
