@@ -41,6 +41,21 @@ final class NewAccountViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    
+    // MARK: - Override func
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        
+        view.endEditing(true)
+    }
+    
+    // MARK: - Actions
+    @objc
+    private func showLoginViewController() {
+        let loginVC = LoginViewController()
+        
+        present(loginVC, animated: true)
+    }
 }
 
 // MARK: - Setting View
@@ -49,6 +64,7 @@ private extension NewAccountViewController {
         view.backgroundColor = .systemYellow
         
         addSubViews()
+        addActions()
         
         setupLogo()
         setupBGView()
@@ -103,6 +119,10 @@ private extension NewAccountViewController {
         subViews.forEach { subView in
             stack.addArrangedSubview(subView)
         }
+    }
+    
+    func addActions() {
+        linkButton.addTarget(self, action: #selector(showLoginViewController), for: .touchUpInside)
     }
 }
 

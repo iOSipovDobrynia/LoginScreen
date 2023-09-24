@@ -47,6 +47,14 @@ final class LoginViewController: UIViewController {
         
         view.endEditing(true)
     }
+    
+    // MARK: - Actions
+    @objc
+    private func showNewAccountViewController() {
+        let newAccVC = NewAccountViewController()
+        
+        present(newAccVC, animated: true)
+    }
 }
 
 // MARK: - Setting view
@@ -55,6 +63,7 @@ private extension LoginViewController {
         view.backgroundColor = .systemYellow
         
         addSubViews()
+        addActions()
         
         setupBGView()
         setupLogo()
@@ -103,6 +112,10 @@ private extension LoginViewController {
         subViews.forEach { subView in
             stack.addArrangedSubview(subView)
         }
+    }
+    
+    func addActions() {
+        linkButton.addTarget(self, action: #selector(showNewAccountViewController), for: .touchUpInside)
     }
 }
 
