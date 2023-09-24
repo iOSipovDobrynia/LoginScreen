@@ -73,6 +73,8 @@ private extension LoginViewController {
         setupStack(newAccountStack, with: [questionLabel, linkButton], and: .horizontal)
         
         setupLayout()
+        
+        setDelegate()
     }
 }
 
@@ -116,6 +118,11 @@ private extension LoginViewController {
     
     func addActions() {
         linkButton.addTarget(self, action: #selector(showNewAccountViewController), for: .touchUpInside)
+    }
+    
+    func setDelegate() {
+        emailTF.delegate = self
+        passwordTF.delegate = self
     }
 }
 
@@ -169,5 +176,18 @@ private extension LoginViewController {
             newAccountStack.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.2),
             newAccountStack.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension LoginViewController: UITextFieldDelegate {
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == emailTF {
+            passwordTF.becomeFirstResponder()
+        } else {
+            view.endEditing(true)
+        }
+        return true
     }
 }

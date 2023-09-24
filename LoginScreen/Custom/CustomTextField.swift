@@ -46,6 +46,8 @@ final class CustomTextField: UITextField {
             ]
         )
         
+        tintColor = .white
+        
         font = .boldSystemFont(ofSize: 18)
         textColor = .white
         
