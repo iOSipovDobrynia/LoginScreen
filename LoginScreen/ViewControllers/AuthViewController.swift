@@ -40,7 +40,7 @@ final class AuthViewController: UIViewController {
 // MARK: - Setting View
 private extension AuthViewController {
     func setupView() {
-        view.backgroundColor = #colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1)
+        view.backgroundColor = .mainBackGround
         
         addSubviews()
         
@@ -117,13 +117,11 @@ private extension AuthViewController {
             emailStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             emailStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
             emailStack.heightAnchor.constraint(equalToConstant: 150),
-            emailButton.heightAnchor.constraint(equalToConstant: 50),
             
             loginStack.topAnchor.constraint(equalTo: emailStack.bottomAnchor, constant: 30),
             loginStack.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 16),
             loginStack.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
-            loginStack.heightAnchor.constraint(equalToConstant: 150),
-            loginButton.heightAnchor.constraint(equalToConstant: 50)
+            loginStack.heightAnchor.constraint(equalToConstant: 150)
         ])
     }
 }

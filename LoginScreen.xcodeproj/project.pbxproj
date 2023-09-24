@@ -13,6 +13,7 @@
 		E3C95C7F2AC02E3A0032ABF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3C95C7E2AC02E3A0032ABF3 /* Assets.xcassets */; };
 		E3C95C8E2AC03AD40032ABF3 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */; };
 		E3C95C902AC041570032ABF3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C8F2AC041570032ABF3 /* CustomButton.swift */; };
+		E3C95C942AC05B8A0032ABF3 /* UIColor + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C932AC05B8A0032ABF3 /* UIColor + extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E3C95C832AC02E3A0032ABF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		E3C95C8F2AC041570032ABF3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
+		E3C95C932AC05B8A0032ABF3 /* UIColor + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +58,10 @@
 		E3C95C742AC02E380032ABF3 /* LoginScreen */ = {
 			isa = PBXGroup;
 			children = (
-				E3C95C8C2AC03ABA0032ABF3 /* New Group */,
-				E3C95C8A2AC0362A0032ABF3 /* App */,
+				E3C95C952AC05B950032ABF3 /* Custom */,
+				E3C95C912AC05B6E0032ABF3 /* Extensions */,
 				E3C95C8B2AC0365B0032ABF3 /* ViewControllers */,
+				E3C95C8A2AC0362A0032ABF3 /* App */,
 				E3C95C892AC036220032ABF3 /* Resources */,
 			);
 			path = LoginScreen;
@@ -86,17 +89,25 @@
 			isa = PBXGroup;
 			children = (
 				E3C95C792AC02E380032ABF3 /* AuthViewController.swift */,
-				E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */,
-				E3C95C8F2AC041570032ABF3 /* CustomButton.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		E3C95C8C2AC03ABA0032ABF3 /* New Group */ = {
+		E3C95C912AC05B6E0032ABF3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				E3C95C932AC05B8A0032ABF3 /* UIColor + extensions.swift */,
 			);
-			path = "New Group";
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E3C95C952AC05B950032ABF3 /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */,
+				E3C95C8F2AC041570032ABF3 /* CustomButton.swift */,
+			);
+			path = Custom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E3C95C7A2AC02E380032ABF3 /* AuthViewController.swift in Sources */,
+				E3C95C942AC05B8A0032ABF3 /* UIColor + extensions.swift in Sources */,
 				E3C95C762AC02E380032ABF3 /* AppDelegate.swift in Sources */,
 				E3C95C782AC02E380032ABF3 /* SceneDelegate.swift in Sources */,
 				E3C95C8E2AC03AD40032ABF3 /* CustomLabel.swift in Sources */,

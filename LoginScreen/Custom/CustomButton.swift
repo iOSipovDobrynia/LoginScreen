@@ -28,6 +28,7 @@ final class CustomButton: UIButton {
     private func setupSelfButton(title: String, backgroundColor: UIColor, isShadow: Bool, titleColor: UIColor) {
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)
+        setTitleColor(.highlightedColor, for: .highlighted)
         titleLabel?.font = .systemFont(ofSize: 25)
         layer.cornerRadius = 10
         self.backgroundColor = backgroundColor
@@ -38,5 +39,8 @@ final class CustomButton: UIButton {
             layer.shadowOpacity = 0.4
             layer.shadowOffset = CGSize(width: 0, height: 7)
         }
+        
+        heightAnchor.constraint(equalToConstant: 50).isActive = true
+
     }
 }
