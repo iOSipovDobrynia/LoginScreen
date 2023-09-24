@@ -12,6 +12,21 @@ final class AuthViewController: UIViewController {
     // MARK: - Private properties
     private let logoImage = UIImageView()
     
+    private let emailLabel = CustomLabel(title: "Create a new account")
+    private let loginLabel = CustomLabel(title: "Login with existing credentials")
+    
+    private let emailButton = CustomButton(
+        title: "Email",
+        backgroundColor: .systemCyan,
+        isShadow: false
+    )
+    private let loginButton = CustomButton(
+        title: "Login",
+        backgroundColor: .white,
+        isShadow: true,
+        titleColor: .black
+    )
+    
     // MARK: - View's life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
