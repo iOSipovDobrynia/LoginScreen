@@ -9,6 +9,7 @@ import UIKit
 
 final class CustomButton: UIButton {
     
+    // MARK: - Initializer
     init(title: String, backgroundColor: UIColor, isShadow: Bool, titleColor: UIColor = .white) {
         super.init(frame: .zero)
         
@@ -25,6 +26,7 @@ final class CustomButton: UIButton {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private func
     private func setupSelfButton(title: String, backgroundColor: UIColor, isShadow: Bool, titleColor: UIColor) {
         setTitle(title, for: .normal)
         setTitleColor(titleColor, for: .normal)

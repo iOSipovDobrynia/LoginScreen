@@ -14,6 +14,8 @@
 		E3C95C8E2AC03AD40032ABF3 /* CustomLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */; };
 		E3C95C902AC041570032ABF3 /* CustomButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C8F2AC041570032ABF3 /* CustomButton.swift */; };
 		E3C95C942AC05B8A0032ABF3 /* UIColor + extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C932AC05B8A0032ABF3 /* UIColor + extensions.swift */; };
+		E3C95C972AC05EF00032ABF3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C962AC05EF00032ABF3 /* LoginViewController.swift */; };
+		E3C95C992AC061660032ABF3 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C95C982AC061660032ABF3 /* CustomTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLabel.swift; sourceTree = "<group>"; };
 		E3C95C8F2AC041570032ABF3 /* CustomButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButton.swift; sourceTree = "<group>"; };
 		E3C95C932AC05B8A0032ABF3 /* UIColor + extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + extensions.swift"; sourceTree = "<group>"; };
+		E3C95C962AC05EF00032ABF3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		E3C95C982AC061660032ABF3 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				E3C95C792AC02E380032ABF3 /* AuthViewController.swift */,
+				E3C95C962AC05EF00032ABF3 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -106,6 +111,7 @@
 			children = (
 				E3C95C8D2AC03AD40032ABF3 /* CustomLabel.swift */,
 				E3C95C8F2AC041570032ABF3 /* CustomButton.swift */,
+				E3C95C982AC061660032ABF3 /* CustomTextField.swift */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -179,9 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C95C972AC05EF00032ABF3 /* LoginViewController.swift in Sources */,
 				E3C95C7A2AC02E380032ABF3 /* AuthViewController.swift in Sources */,
 				E3C95C942AC05B8A0032ABF3 /* UIColor + extensions.swift in Sources */,
 				E3C95C762AC02E380032ABF3 /* AppDelegate.swift in Sources */,
+				E3C95C992AC061660032ABF3 /* CustomTextField.swift in Sources */,
 				E3C95C782AC02E380032ABF3 /* SceneDelegate.swift in Sources */,
 				E3C95C8E2AC03AD40032ABF3 /* CustomLabel.swift in Sources */,
 				E3C95C902AC041570032ABF3 /* CustomButton.swift in Sources */,

@@ -9,6 +9,7 @@ import UIKit
 
 final class CustomLabel: UILabel {
     
+    // MARK: - Initializer
     init(title: String) {
         super.init(frame: .zero)
         
@@ -20,6 +21,7 @@ final class CustomLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Private func
     private func setupSelfLabel(title: String) {
         text = title
         textColor = .white

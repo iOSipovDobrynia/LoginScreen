@@ -35,6 +35,19 @@ final class AuthViewController: UIViewController {
         super.viewDidLoad()
         setupView()
     }
+    
+    // MARK: - Actions
+    @objc
+    private func showLoginViewController() {
+        let loginVC = LoginViewController()
+        
+        present(loginVC, animated: true)
+    }
+    
+    @objc
+    private func emailButtonPressed() {
+        
+    }
 }
 
 // MARK: - Setting View
@@ -43,6 +56,7 @@ private extension AuthViewController {
         view.backgroundColor = .mainBackGround
         
         addSubviews()
+        addActions()
         
         setupLogo()
         setupEmailStack()
@@ -89,6 +103,11 @@ private extension AuthViewController {
         ].forEach { subView in
             loginStack.addArrangedSubview(subView)
         }
+    }
+    
+    func addActions() {
+        emailButton.addTarget(self, action: #selector(emailButtonPressed), for: .touchUpInside)
+        loginButton.addTarget(self, action: #selector(showLoginViewController), for: .touchUpInside)
     }
 }
 

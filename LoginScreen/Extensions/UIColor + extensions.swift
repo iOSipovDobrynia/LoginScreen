@@ -15,4 +15,8 @@ extension UIColor {
     static var highlightedColor: UIColor {
         #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
     }
+    
+    static var textFieldBackground: UIColor {
+        #colorLiteral(red: 0.1411764771, green: 0.3960784376, blue: 0.5647059083, alpha: 1)
+    }
 }
